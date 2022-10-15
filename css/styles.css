@@ -7,9 +7,11 @@
   --background-gray: #f5f4fa;
   --footer-color: #2f303a;
   --address-color: rgba(255, 255, 255, 0.6);
-  --outline: 0px solid tomato;
+  --outline: 1px solid tomato;
   --logo-black-color: #000000;
   --hover-hero-btn-color: #188ce8;
+  --social-icon-color: #afb1b8;
+  --background-social-footer-color: #ffffff1a;
   --s: #eeeeee;
 
   --ss: #ececec;
@@ -101,7 +103,7 @@ img {
   outline: var(--outline);
 }
 
-/* HEADER */
+/** =================================HEADER================================== */
 header {
   border-bottom: 1px solid #ececec;
 }
@@ -133,10 +135,6 @@ header {
   margin-left: 50px;
 }
 
-.contact-menu,
-.nav-list {
-  display: flex;
-}
 .contact-menu a {
   color: var(--text-color);
 }
@@ -159,6 +157,11 @@ header {
 .current {
   color: var(--blue-color);
 }
+.contact-menu,
+.nav-list {
+  display: flex;
+}
+
 .nav-menu {
   display: flex;
   margin-left: 93px;
@@ -166,13 +169,24 @@ header {
 .contact-menu-item:not(:last-child) {
   margin-right: 50px;
 }
-.mail {
-  margin-left: auto;
-}
-.header-container {
+
+.header-container,
+.contact-link {
   display: flex;
   align-items: center;
 }
+.contact-icon {
+  fill: var(--text-color);
+  margin-right: 10px;
+}
+
+.contact-icon {
+  fill: currentColor;
+}
+/* .contact-link:hover .envelope {
+  fill: var(--blue-color);
+} */
+
 /** ====================================HERO=================================== */
 .hero-title {
   width: 696px;
@@ -188,10 +202,16 @@ header {
 
   color: var(--white-color);
 }
+
 .hero {
-  background-color: var(--footer-color);
   padding-bottom: 200px;
   padding-top: 200px;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--footer-color);
 }
 .hero-btn {
   min-width: 216px;
@@ -250,6 +270,17 @@ header {
 .section {
   padding: 94px 0;
 }
+.background {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-gray);
+  border-radius: 4px;
+  margin-bottom: 30px;
+
+  justify-content: center;
+  align-items: center;
+}
 
 /** =================================OUR-WORKS=============================== */
 .our-works {
@@ -302,10 +333,62 @@ section.team {
 }
 .card-text-container {
   padding-top: 30px;
-  padding-bottom: 30px;
+
   text-align: center;
 }
 
+.social-media-list {
+  display: flex;
+  justify-content: space-between;
+  width: 206px;
+  height: 44px;
+  margin: 16px 32px 30px 32px;
+}
+.social-media-item {
+  width: 44px;
+  height: 44px;
+}
+.social-icon {
+  display: block;
+  fill: var(--social-icon-color);
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  fill: var(--white-color);
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+}
+.social-media-item:hover,
+.social-media-item:focus {
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/** ==================================REGULAR CUSTOMERS========================= */
+.customers-title {
+  text-align: center;
+}
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+.customers-list-item {
+  border: var(--social-icon-color) solid 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.customers-list-item:hover {
+  fill: var(--blue-color);
+  border: var(--blue-color) solid 1px;
+}
 /** ========================================FOOTER================================== */
 footer {
   background-color: var(--footer-color);
@@ -331,6 +414,51 @@ footer .logo {
 }
 .footer-logo-studio {
   color: var(--white-color);
+}
+
+.footer-social-title {
+  margin-top: 12px;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--background-white);
+}
+.container.footer {
+  display: flex;
+}
+.footer-social {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+}
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--background-social-footer-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.footer-social-link:hover {
+  background-color: var(--blue-color);
+}
+
+.footer-social-icon {
+  display: block;
+  fill: var(--background-white);
 }
 
 /** =====================PORTFOLIO=========PORTFOLIO=========PORTFOLIO=================== */
