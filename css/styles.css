@@ -7,7 +7,7 @@
   --background-gray: #f5f4fa;
   --footer-color: #2f303a;
   --address-color: rgba(255, 255, 255, 0.6);
-  --outline: 1px solid tomato;
+  --outline: 0px solid tomato;
   --logo-black-color: #000000;
   --hover-hero-btn-color: #188ce8;
   --social-icon-color: #afb1b8;
@@ -364,11 +364,15 @@ section.team {
   width: inherit;
   height: inherit;
 }
-.social-media-item:hover,
-.social-media-item:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--blue-color);
   border-radius: 50%;
   cursor: pointer;
+}
+.social-link:hover svg,
+.social-link:focus svg {
+  fill: var(--white-color);
 }
 
 /** ==================================REGULAR CUSTOMERS========================= */
@@ -388,6 +392,12 @@ section.team {
 .customers-list-item:hover {
   fill: var(--blue-color);
   border: var(--blue-color) solid 1px;
+}
+.customers-icon {
+  fill: var(--social-icon-color);
+}
+.customers-icon:hover {
+  fill: var(--blue-color);
 }
 /** ========================================FOOTER================================== */
 footer {
@@ -452,7 +462,8 @@ footer .logo {
 
   cursor: pointer;
 }
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   background-color: var(--blue-color);
 }
 
@@ -510,6 +521,10 @@ footer .logo {
   display: flex;
   flex-wrap: wrap;
 }
+.works-list-item {
+  display: block;
+}
+
 .works-list-item:not(:nth-child(3n + 3)) {
   margin-right: 30px;
 }
@@ -520,10 +535,23 @@ footer .logo {
 .filter-btn:focus {
   background-color: var(--blue-color);
   color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .title-container {
   padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   justify-content: space-between;
+}
+.works-list-link {
+  display: block;
+}
+
+.works-list-link:hover,
+.works-list-link:focus {
+  background: #ffffff;
+
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
