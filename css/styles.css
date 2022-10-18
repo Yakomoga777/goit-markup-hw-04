@@ -30,6 +30,10 @@ html {
 a {
   text-decoration: none;
   color: var(--title-black-color);
+  margin: 0;
+}
+p {
+  margin: 0;
 }
 
 ul {
@@ -183,9 +187,6 @@ header {
 .contact-icon {
   fill: currentColor;
 }
-/* .contact-link:hover .envelope {
-  fill: var(--blue-color);
-} */
 
 /** ====================================HERO=================================== */
 .hero-title {
@@ -329,28 +330,22 @@ section.team {
   font-size: 16px;
   line-height: 1.19;
   color: var(--text-color);
-  margin: 0;
 }
 .card-text-container {
   padding-top: 30px;
-
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .social-media-list {
   display: flex;
-  justify-content: space-between;
-  width: 206px;
-  height: 44px;
-  margin: 16px 32px 30px 32px;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 10px;
 }
 .social-media-item {
   width: 44px;
   height: 44px;
-}
-.social-icon {
-  display: block;
-  fill: var(--social-icon-color);
 }
 
 .social-icon:hover,
@@ -363,12 +358,13 @@ section.team {
   align-items: center;
   width: inherit;
   height: inherit;
+  border-radius: 50%;
+  fill: var(--social-icon-color);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--blue-color);
-  border-radius: 50%;
-  cursor: pointer;
+  color: var(--white-color);
 }
 .social-link:hover svg,
 .social-link:focus svg {
@@ -383,22 +379,28 @@ section.team {
   display: flex;
   justify-content: space-between;
 }
+
 .customers-list-item {
-  border: var(--social-icon-color) solid 1px;
-  border-radius: 4px;
+  width: 170px;
+  height: 92px;
   cursor: pointer;
 }
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--social-icon-color);
+  border-radius: 4px;
+  fill: var(--social-icon-color);
+}
 
-.customers-list-item:hover {
+.customers-link:hover {
   fill: var(--blue-color);
   border: var(--blue-color) solid 1px;
 }
-.customers-icon {
-  fill: var(--social-icon-color);
-}
-.customers-icon:hover {
-  fill: var(--blue-color);
-}
+
 /** ========================================FOOTER================================== */
 footer {
   background-color: var(--footer-color);
@@ -427,19 +429,15 @@ footer .logo {
 }
 
 .footer-social-title {
-  margin-top: 12px;
   margin-bottom: 20px;
-
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--background-white);
 }
 .container.footer {
   display: flex;
+  align-items: baseline;
 }
 .footer-social {
   width: 206px;
